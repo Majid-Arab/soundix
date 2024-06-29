@@ -1,6 +1,8 @@
 import { ActionIcon, AppShell, Box, Burger, Title } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
+import { HeaderSimple } from '@/components/Header/Header';
+import { NavbarSimple } from '@/components/Sidebar/SidebarSimple';
 
 const HEADER_HEIGHT = 60;
 export function HomePage() {
@@ -21,10 +23,12 @@ export function HomePage() {
     >
       <AppShell.Header>
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <div>Logo</div>
+        <HeaderSimple />
       </AppShell.Header>
 
-      <AppShell.Navbar p="md">Navbar</AppShell.Navbar>
+      <AppShell.Navbar p="md">
+        <NavbarSimple />
+      </AppShell.Navbar>
 
       <AppShell.Main>
         <Box
