@@ -1,12 +1,13 @@
-import { CarouselCard } from '@/components/Home/Carousel';
+import { CarouselSimple } from '@/components/Home/CarouselSimple';
 import { Category } from '@/components/Home/Category';
+import { Product } from '@/components/Home/Product';
 
 function Home() {
   return (
     <div>
-      {/* <CarouselCard /> */}
-      <Category />
-      <Category />
+      <Product />
+      {/* <CarouselSimple /> */}
+      {/* <Category /> */}
     </div>
   );
 }
