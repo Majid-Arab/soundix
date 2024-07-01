@@ -4,9 +4,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-size: cover;
-  background-position: center;
-  background-image: url('../../public/photo-1508193638397-1c4234db14d8.jpeg');
+  background-color: #a1d2ff;
+  background-image: linear-gradient(90deg, #a1d2ff 0%, #00e0c6 90%);
   position: relative;
   padding: 20px;
 }
