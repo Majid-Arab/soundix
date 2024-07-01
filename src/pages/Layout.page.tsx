@@ -3,6 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { HeaderSimple } from '@/components/Header/Header';
 import { NavbarSimple } from '@/components/Sidebar/SidebarSimple';
+import Asidebar from '@/components/Aside/Asidebar';
 
 const HEADER_HEIGHT = 60;
 export function HomePage() {
@@ -34,7 +35,7 @@ export function HomePage() {
         <Box
           style={{
             position: 'fixed',
-            width: 300,
+            width: 500,
             height: '100%',
             right: 0,
             top: HEADER_HEIGHT,
@@ -52,7 +53,9 @@ export function HomePage() {
                 <IconChevronRight style={{ width: '100%', height: '100%' }} stroke={1.5} />
               )}
             </ActionIcon>
-            <Title>Aside</Title>
+            <Title>
+              <Asidebar />
+            </Title>
           </Box>
         </Box>
         <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>Main</Box>
