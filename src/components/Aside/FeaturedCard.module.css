@@ -8,21 +8,13 @@
   background-position: center;
   background-image: url('../../public/photo-1508193638397-1c4234db14d8.jpeg');
   position: relative;
-}
-
-.title {
-  font-family: var(--mantine-font-family);
-  font-weight: 900;
-  color: var(--mantine-color-white);
-  line-height: 1.2;
-  font-size: rem(32px);
-  margin-top: var(--mantine-spacing-xs);
+  padding: 20px;
 }
 
 .featuredImage {
-  object-fit: cover;
-  position: 'absolute';
-  left: '-15px';
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
 }
 
 .category {
