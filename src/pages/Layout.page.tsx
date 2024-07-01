@@ -4,6 +4,7 @@ import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { HeaderSimple } from '@/components/Header/Header';
 import { NavbarSimple } from '@/components/Sidebar/SidebarSimple';
 import Asidebar from '@/components/Aside/Asidebar';
+import Home from './Home';
 
 const HEADER_HEIGHT = 60;
 export function HomePage() {
@@ -58,7 +59,9 @@ export function HomePage() {
             </Title>
           </Box>
         </Box>
-        <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>Main</Box>
+        <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>
+          <Home />
+        </Box>
       </AppShell.Main>
     </AppShell>
   );

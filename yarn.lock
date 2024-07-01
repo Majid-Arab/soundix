@@ -2964,7 +2964,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:7.11.0":
+"@mantine/carousel@npm:^7.11.0":
+  version: 7.11.0
+  resolution: "@mantine/carousel@npm:7.11.0"
+  peerDependencies:
+    "@mantine/core": 7.11.0
+    "@mantine/hooks": 7.11.0
+    embla-carousel-react: ">=7.0.0"
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10c0/cabafa5aa509ce08ee8ed1dc73c8a4ee3b1494cd7290baa71122c03e14fbe41161c8b90be129339a630a151070f5091d8dbeef71cc520629fcbd42e9ffe36fea
+  languageName: node
+  linkType: hard
+
+"@mantine/core@npm:^7.11.0":
   version: 7.11.0
   resolution: "@mantine/core@npm:7.11.0"
   dependencies:
@@ -2982,7 +2995,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:7.11.0":
+"@mantine/hooks@npm:^7.11.0":
   version: 7.11.0
   resolution: "@mantine/hooks@npm:7.11.0"
   peerDependencies:
@@ -6922,6 +6935,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"embla-carousel-react@npm:^8.1.6":
+  version: 8.1.6
+  resolution: "embla-carousel-react@npm:8.1.6"
+  dependencies:
+    embla-carousel: "npm:8.1.6"
+    embla-carousel-reactive-utils: "npm:8.1.6"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: 10c0/9de9aa4a9d02c3829f437ada0589c9f0ac449167b13cf1f238b1f786a78d7a90d5a8d65013d583283b95a3dc0549186e1ac762dbe974d2cd57dcbb29661f6aa6
+  languageName: node
+  linkType: hard
+
+"embla-carousel-reactive-utils@npm:8.1.6":
+  version: 8.1.6
+  resolution: "embla-carousel-reactive-utils@npm:8.1.6"
+  peerDependencies:
+    embla-carousel: 8.1.6
+  checksum: 10c0/e8e30e24bc3a0ff8a49b3dc724d9d53c75a3061a31ef76535d7be6bca72097ff099f45486f8ae3f3a70145895a99f21c277de01582c8c61669df8edf4560f57f
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:8.1.6":
+  version: 8.1.6
+  resolution: "embla-carousel@npm:8.1.6"
+  checksum: 10c0/a0085b97fa7aeea8c98187b58a25ca9648494afc14c8e41a3322920bd92d54659d04ed0aec0b3a7f60658bf49b22805b0ba76ffc0bae85d8719089f17402fb94
+  languageName: node
+  linkType: hard
+
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -9955,8 +9996,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "mantine-vite-template@workspace:."
   dependencies:
-    "@mantine/core": "npm:7.11.0"
-    "@mantine/hooks": "npm:7.11.0"
+    "@mantine/carousel": "npm:^7.11.0"
+    "@mantine/core": "npm:^7.11.0"
+    "@mantine/hooks": "npm:^7.11.0"
     "@storybook/addon-essentials": "npm:^8.1.10"
     "@storybook/addon-interactions": "npm:^8.1.10"
     "@storybook/addon-links": "npm:^8.1.10"
@@ -9974,6 +10016,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.13.1"
     "@typescript-eslint/parser": "npm:^7.13.1"
     "@vitejs/plugin-react": "npm:^4.3.1"
+    embla-carousel-react: "npm:^8.1.6"
     eslint: "npm:^8.57.0"
     eslint-config-airbnb: "npm:19.0.4"
     eslint-config-airbnb-typescript: "npm:^18.0.0"
