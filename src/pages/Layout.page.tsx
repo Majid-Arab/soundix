@@ -21,7 +21,7 @@ export function HomePage() {
       withBorder={false}
       padding="md"
     >
-      <AppShell.Header>
+      <AppShell.Header p="lg">
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
         <HeaderSimple />
       </AppShell.Header>

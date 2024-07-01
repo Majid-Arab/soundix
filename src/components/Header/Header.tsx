@@ -10,7 +10,7 @@ import {
   Box,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconBell, IconMessage, IconSearch } from '@tabler/icons-react';
+import { IconBell, IconMessage, IconRulerMeasure, IconSearch } from '@tabler/icons-react';
 import classes from './Header.module.css';
 
 export function HeaderSimple() {
@@ -27,23 +27,28 @@ export function HeaderSimple() {
           </Box>
         </Group>
 
-        <Group>
+        <Group gap={20}>
           <Autocomplete
             className={classes.search}
-            placeholder="Search"
+            placeholder="Search Product"
             leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
+            rightSection={
+              <IconRulerMeasure style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            }
             data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
             visibleFrom="xs"
+            size="md"
           />
-          <Group ml={50} gap={5} className={classes.links} visibleFrom="sm">
-            <ActionIcon variant="outline">
+          <Group gap={20} className={classes.links} visibleFrom="sm">
+            <ActionIcon variant="outline" p={5} size="lg">
               <IconMessage stroke={1} />
             </ActionIcon>
-            <ActionIcon variant="outline">
+            <ActionIcon variant="outline" p={5} size="lg">
               <IconBell stroke={1} />
             </ActionIcon>
             <Avatar
               radius="xl"
+              size={45}
               src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png"
             />
           </Group>
