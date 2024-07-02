@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Image,
   Container,
@@ -5,18 +6,18 @@ import {
   Button,
   Group,
   Text,
-  List,
   ThemeIcon,
-  rem,
   ActionIcon,
+  Grid,
 } from '@mantine/core';
-import { IconCheck, IconHeartFilled, IconPointFilled } from '@tabler/icons-react';
+import { IconHeartFilled, IconMinus, IconPlus } from '@tabler/icons-react';
 import image from '../../public/headphone1.png';
 import classes from './Product.module.css';
 
 export function Product() {
+  const [count, setCount] = useState(0);
   return (
-    <Container size="md" maw={1000} mah={400} pt={20}>
+    <Container maw="100%" mah={400} pt={20}>
       <div className={classes.inner}>
         <Image src={image} className={classes.image} />
         <div className={classes.content}>
@@ -28,24 +29,55 @@ export function Product() {
           <Title className={classes.price} style={{ color: 'lightgreen' }}>
             Price: $199.96
           </Title>
-          <Group>
-            <Title className={classes.price}>Color</Title>
-            <ThemeIcon radius="xl" size="md" style={{ backgroundColor: 'lightgreen' }}></ThemeIcon>
-            <ThemeIcon radius="xl" size="md" style={{ backgroundColor: 'blue' }}></ThemeIcon>
-            <ThemeIcon radius="xl" size="md" style={{ backgroundColor: 'black' }}></ThemeIcon>
+          <Group justify="space-between">
+            <Group>
+              <Title className={classes.price}>Color</Title>
+              <ThemeIcon radius="xl" size="md" style={{ backgroundColor: 'red' }}></ThemeIcon>
+              <ThemeIcon radius="xl" size="md" style={{ backgroundColor: 'blue' }}></ThemeIcon>
+              <ThemeIcon radius="xl" size="md" style={{ backgroundColor: 'black' }}></ThemeIcon>
+            </Group>
+            <Group style={{ backgroundColor: '#F1F1F1', borderRadius: '180px' }} p={5}>
+              <ActionIcon
+                variant="white"
+                color="black"
+                radius="xl"
+                onClick={() => {
+                  if (count > 0) {
+                    setCount(count - 1);
+                  }
+                }}
+              >
+                <IconMinus stroke={1} />
+              </ActionIcon>
+              <Text>{count}</Text>
+              <ActionIcon
+                variant="white"
+                radius="xl"
+                color="black"
+                onClick={() => setCount(count + 1)}
+              >
+                <IconPlus stroke={1} />
+              </ActionIcon>
+            </Group>
           </Group>
 
-          <Group mt={30}>
-            <ActionIcon variant="outline" radius="md" size="xl">
-              <IconHeartFilled stroke={1} />
-            </ActionIcon>
-            <Button variant="outline" radius="md" size="md" className={classes.control}>
-              Add to cart
-            </Button>
-            <Button variant="filled" radius="md" size="md" className={classes.control}>
-              Buy now
-            </Button>
-          </Group>
+          <Grid mt={30}>
+            <Grid.Col span={2}>
+              <ActionIcon variant="outline" radius="md" size={50}>
+                <IconHeartFilled stroke={1} size={30} />
+              </ActionIcon>
+            </Grid.Col>
+            <Grid.Col span={5}>
+              <Button fullWidth variant="outline" radius="md" size="lg" className={classes.control}>
+                Add to cart
+              </Button>
+            </Grid.Col>
+            <Grid.Col span={5}>
+              <Button fullWidth variant="filled" radius="md" size="lg" className={classes.control}>
+                Buy now
+              </Button>
+            </Grid.Col>
+          </Grid>
         </div>
       </div>
     </Container>

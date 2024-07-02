@@ -23,7 +23,7 @@ export function HeaderSimple() {
           <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
           <Box>
             <Title>Headphones</Title>
-            <Text>from top brands</Text>
+            <Text>From top brands</Text>
           </Box>
         </Group>
 
@@ -40,10 +40,10 @@ export function HeaderSimple() {
             size="md"
           />
           <Group gap={20} className={classes.links} visibleFrom="sm">
-            <ActionIcon variant="outline" p={5} size="lg">
+            <ActionIcon variant="light" p={5} size="lg">
               <IconMessage stroke={1} />
             </ActionIcon>
-            <ActionIcon variant="outline" p={5} size="lg">
+            <ActionIcon variant="light" p={5} size="lg">
               <IconBell stroke={1} />
             </ActionIcon>
             <Avatar

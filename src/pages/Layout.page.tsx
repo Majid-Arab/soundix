@@ -1,4 +1,4 @@
-import { ActionIcon, AppShell, Box, Burger, Title } from '@mantine/core';
+import { ActionIcon, AppShell, Box, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { HeaderSimple } from '@/components/Header/Header';
@@ -21,9 +21,8 @@ export function HomePage() {
         collapsed: { mobile: !opened },
       }}
       withBorder={false}
-      padding="md"
     >
-      <AppShell.Header p="lg">
+      <AppShell.Header py="lg">
         <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
         <HeaderSimple />
       </AppShell.Header>
@@ -37,9 +36,10 @@ export function HomePage() {
           style={{
             position: 'fixed',
             width: 500,
-            height: '100%',
-            right: 0,
-            top: HEADER_HEIGHT,
+            height: '90%',
+            right: 10,
+            // top: HEADER_HEIGHT,
+            bottom: 0,
           }}
         >
           <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>
@@ -54,12 +54,15 @@ export function HomePage() {
                 <IconChevronRight style={{ width: '100%', height: '100%' }} stroke={1.5} />
               )}
             </ActionIcon>
-            <Title>
+            <Box>
               <Asidebar />
-            </Title>
+            </Box>
           </Box>
         </Box>
-        <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>
+        <Box
+          style={{ position: 'relative', display: 'flex', flex: 1, height: '90%', width: '65%' }}
+          pt={20}
+        >
           <Home />
         </Box>
       </AppShell.Main>
