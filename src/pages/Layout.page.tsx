@@ -7,9 +7,10 @@ import Asidebar from '@/components/Aside/Asidebar';
 import Home from './Home';
 
 const HEADER_HEIGHT = 60;
+
 export function HomePage() {
   const [opened, { toggle }] = useDisclosure();
-  const [openedAside, { toggle: toggleAside }] = useDisclosure();
+  const [openedAside, { toggle: toggleAside }] = useDisclosure(true);
 
   return (
     <AppShell
@@ -38,14 +39,18 @@ export function HomePage() {
             width: 500,
             height: '90%',
             right: 10,
-            // top: HEADER_HEIGHT,
             bottom: 0,
           }}
         >
           <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>
             <ActionIcon
               variant="subtle"
-              style={{ position: 'absolute', top: '50%', left: '-15px' }}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '-15px',
+                transform: 'translateY(-50%)',
+              }}
               onClick={toggleAside}
             >
               {openedAside ? (
@@ -54,14 +59,13 @@ export function HomePage() {
                 <IconChevronRight style={{ width: '100%', height: '100%' }} stroke={1.5} />
               )}
             </ActionIcon>
-            <Box>
-              <Asidebar />
-            </Box>
+            <Box>{openedAside && <Asidebar />}</Box>
           </Box>
         </Box>
         <Box
           style={{ position: 'relative', display: 'flex', flex: 1, height: '90%', width: '65%' }}
           pt={20}
+          px={20}
         >
           <Home />
         </Box>

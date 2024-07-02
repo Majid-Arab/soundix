@@ -1,4 +1,4 @@
-import { Avatar, Table, Group, Text, Button } from '@mantine/core';
+import { Avatar, Table, Group, Text, Title, Button } from '@mantine/core';
 import { IconArrowNarrowRight } from '@tabler/icons-react';
 
 const data = [
@@ -65,9 +65,9 @@ export function ProductTable() {
   ));
 
   return (
-    <Table.ScrollContainer minWidth={200}>
+    <Table.ScrollContainer minWidth={200} pt={50}>
       <Group justify="space-between">
-        <Text>Daily Deals</Text>
+        <Title order={2}>Daily Deals</Title>
         <Button variant="subtle">
           View all <IconArrowNarrowRight stroke={2} />
         </Button>

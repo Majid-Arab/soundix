@@ -7,9 +7,9 @@ function Home() {
   return (
     <div>
       <Product />
-      <CardsCarousel />
-      <ProductList />
-      {/* <Category /> */}
+      {/* <CardsCarousel /> */}
+      {/* <ProductList /> */}
+      <Category />
     </div>
   );
 }
