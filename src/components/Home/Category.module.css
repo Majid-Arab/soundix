@@ -7,7 +7,7 @@
 .inner {
   padding-left: var(--mantine-spacing-xl);
   margin-left: var(--mantine-spacing-xl);
-  border-left: rem(2px) solid black;
+  border-left: 2px solid black;
 }
 
 .title {
@@ -19,5 +19,5 @@
 .body {
   padding: var(--mantine-spacing-lg);
   margin-left: var(--mantine-spacing-xl);
-  border-left: rem(2px) solid black;
+  border-left: 2px solid black;
 }

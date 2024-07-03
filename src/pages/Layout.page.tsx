@@ -40,6 +40,7 @@ export function HomePage() {
             height: '90%',
             right: 10,
             bottom: 0,
+            backgroundColor: 'white',
           }}
         >
           <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>
@@ -50,6 +51,7 @@ export function HomePage() {
                 top: '50%',
                 left: '-15px',
                 transform: 'translateY(-50%)',
+                breakpoint: 'sm',
               }}
               onClick={toggleAside}
             >
@@ -62,11 +64,7 @@ export function HomePage() {
             <Box>{openedAside && <Asidebar />}</Box>
           </Box>
         </Box>
-        <Box
-          style={{ position: 'relative', display: 'flex', flex: 1, height: '90%', width: '65%' }}
-          pt={20}
-          px={20}
-        >
+        <Box style={{ height: '90%', width: '65%', backgroundColor: 'white' }} pt={20} px={20}>
           <Home />
         </Box>
       </AppShell.Main>
