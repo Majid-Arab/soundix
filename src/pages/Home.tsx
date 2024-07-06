@@ -1,3 +1,4 @@
+import MobileFooter from '@/components/Header/MobileFooter';
 import { Category } from '@/components/Home/Category';
 import { Product } from '@/components/Home/Product';
 
@@ -8,6 +9,7 @@ function Home() {
       {/* <ProductCarousel /> */}
       {/* <ProductList /> */}
       <Category />
+      <MobileFooter />
     </div>
   );
 }
