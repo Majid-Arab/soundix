@@ -1,94 +1,37 @@
-import React, { useEffect } from 'react';
-import { ActionIcon, AppShell, Box, Burger } from '@mantine/core';
-import { useDisclosure, useMediaQuery } from '@mantine/hooks';
-import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
-import { createStyles } from '@mantine/emotion';
-import { HeaderSimple } from '@/components/Header/Header';
-import { NavbarSimple } from '@/components/Sidebar/SidebarSimple';
-import Asidebar from '@/components/Aside/Asidebar';
+import './globals.css';
+import Navbar from '../components/navbar/index';
+import Sidebar from '../components/sidebar/index';
+import AsideBar from '../components/asidebar/index';
 import Home from './Home';
 
-const HEADER_HEIGHT = 60;
-
-const useStyles = createStyles((theme) => ({
-  actionIcon: {
-    position: 'absolute',
-    top: '50%',
-    left: '-15px',
-    transform: 'translateY(-50%)',
-    [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
-      display: 'none',
-    },
-  },
-  asidebar: {
-    backgroundColor: 'white',
-    [`@media (min-width: ${theme.breakpoints.md}px)`]: {
-      backgroundColor: 'black',
-    },
-  },
-}));
-
 export function HomePage() {
-  const { classes } = useStyles();
-  const [opened, { toggle }] = useDisclosure();
-  const [openedAside, { toggle: toggleAside, close: closeAside }] = useDisclosure(true);
-  const isMobile = useMediaQuery('(max-width: 768px)');
-
-  useEffect(() => {
-    if (isMobile) {
-      closeAside();
-    }
-  }, [isMobile, closeAside]);
-
   return (
-    <AppShell
-      header={{ height: HEADER_HEIGHT }}
-      layout="alt"
-      navbar={{
-        width: 300,
-        breakpoint: 'sm',
-        collapsed: { mobile: !opened },
-      }}
-      withBorder={false}
-    >
-      <AppShell.Header py="lg">
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <HeaderSimple />
-      </AppShell.Header>
+    <html lang="en">
+      <body className="h-screen flex">
+        {/* <!-- Sidebar --> */}
+        <div className="h-full w-72 text-white flex-shrink-0 py-3">
+          <Sidebar />
+        </div>
 
-      <AppShell.Navbar p="md">
-        <NavbarSimple />
-      </AppShell.Navbar>
+        <div className="flex flex-col w-full gap-3">
+          {/* <!-- Header --> */}
+          <header className="h-16 w-full py-3">
+            <Navbar />
+          </header>
 
-      <AppShell.Main>
-        <Box
-          style={{
-            position: 'fixed',
-            width: 500,
-            height: '90%',
-            right: 10,
-            bottom: 0,
-            backgroundColor: 'white',
-          }}
-          className={classes.asidebar}
-        >
-          <Box style={{ position: 'relative', display: 'flex', flex: 1, height: '100%' }}>
-            {!isMobile && (
-              <ActionIcon variant="subtle" className={classes.actionIcon} onClick={toggleAside}>
-                {openedAside ? (
-                  <IconChevronLeft style={{ width: '100%', height: '100%' }} stroke={1.5} />
-                ) : (
-                  <IconChevronRight style={{ width: '100%', height: '100%' }} stroke={1.5} />
-                )}
-              </ActionIcon>
-            )}
-            <Box>{openedAside && <Asidebar />}</Box>
-          </Box>
-        </Box>
-        <Box style={{ height: '90%', width: '65%', backgroundColor: 'white' }} pt={20} px={20}>
-          <Home />
-        </Box>
-      </AppShell.Main>
-    </AppShell>
+          <div className="flex flex-grow">
+            {/* <!-- Main Content --> */}
+            <main className="flex-grow">
+              <Home />
+            </main>
+
+            {/* <!-- Aside --> */}
+            <aside className="h-full w-96 flex-shrink-0">
+              <AsideBar />
+            </aside>
+          </div>
+        </div>
+      </body>
+    </html>
   );
 }
