@@ -4656,21 +4656,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tabler/icons-react@npm:^3.7.0":
-  version: 3.7.0
-  resolution: "@tabler/icons-react@npm:3.7.0"
+"@tabler/icons-react@npm:^3.11.0":
+  version: 3.11.0
+  resolution: "@tabler/icons-react@npm:3.11.0"
   dependencies:
-    "@tabler/icons": "npm:3.7.0"
+    "@tabler/icons": "npm:3.11.0"
   peerDependencies:
     react: ">= 16"
-  checksum: 10c0/928572aeeecd04df0788e0d6643499a540861bcbf81ded2fd05ebd64ee54a5013bfba8ba7966345ebc3bb81ccccd8335440208eceda8eb4858d48736599b6ab1
+  checksum: 10c0/5c3c999ecf9d09ed598ad15e7f938abc3a4eef31f601a0f2523123d925358db8c3286cbe4ec1b2de18e70a1e765c371f15e070ab1e82320f4f417a43a7d8ea87
   languageName: node
   linkType: hard
 
-"@tabler/icons@npm:3.7.0":
-  version: 3.7.0
-  resolution: "@tabler/icons@npm:3.7.0"
-  checksum: 10c0/062b308ff94e127fd051b7ed5d050c25fcb8bcfa4b5ef55071c66b4485beeefce463cbf5088ff25340b5239288bcbc8f4bf65bb73450e668c225ab39fcd923c8
+"@tabler/icons@npm:3.11.0":
+  version: 3.11.0
+  resolution: "@tabler/icons@npm:3.11.0"
+  checksum: 10c0/335558d3e2272e7301a51e5ec2b7c00f32364a004406e5f3ed21a02391017572be4d1baa409718384178bcf1d590b2f84470e847228d0b1305aef597d8be5cd7
   languageName: node
   linkType: hard
 
@@ -10389,7 +10389,7 @@ __metadata:
     "@storybook/react": "npm:^8.1.10"
     "@storybook/react-vite": "npm:^8.1.10"
     "@storybook/testing-library": "npm:^0.2.2"
-    "@tabler/icons-react": "npm:^3.7.0"
+    "@tabler/icons-react": "npm:^3.11.0"
     "@testing-library/dom": "npm:^10.1.0"
     "@testing-library/jest-dom": "npm:^6.4.6"
     "@testing-library/react": "npm:^16.0.0"
@@ -10424,11 +10424,12 @@ __metadata:
     storybook-dark-mode: "npm:^4.0.2"
     stylelint: "npm:^16.6.1"
     stylelint-config-standard-scss: "npm:^13.1.0"
-    tailwindcss: "npm:^3.4.4"
+    tailwindcss: "npm:^3.4.6"
     typescript: "npm:^5.5.2"
     vite: "npm:^5.3.1"
     vite-tsconfig-paths: "npm:^4.3.2"
     vitest: "npm:^1.6.0"
+    zustand: "npm:^4.5.4"
   languageName: unknown
   linkType: soft
 
@@ -13581,9 +13582,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^3.4.4":
-  version: 3.4.4
-  resolution: "tailwindcss@npm:3.4.4"
+"tailwindcss@npm:^3.4.6":
+  version: 3.4.6
+  resolution: "tailwindcss@npm:3.4.6"
   dependencies:
     "@alloc/quick-lru": "npm:^5.2.0"
     arg: "npm:^5.0.2"
@@ -13610,7 +13611,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 10c0/e4f7e1a2e1897871a4744f421ccb5639e8d51012e3644b0c35cf723527fdc8f9cddd3fa3b0fc28c198b0ea6ce44ead21c89cfec549d80bad9b1f3dd9d8bf2d54
+  checksum: 10c0/8d82b697ecf41d8cd100ab3369e3cbcb30e350afc5b595a000b201ba666628a68543154297f96c5b2a3f2614f37bb981af4766556ebaae832079fa9a436e8563
   languageName: node
   linkType: hard
 
@@ -14362,6 +14363,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:1.2.0":
+  version: 1.2.0
+  resolution: "use-sync-external-store@npm:1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/ac4814e5592524f242921157e791b022efe36e451fe0d4fd4d204322d5433a4fc300d63b0ade5185f8e0735ded044c70bcf6d2352db0f74d097a238cebd2da02
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -14933,5 +14943,25 @@ __metadata:
   version: 1.0.0
   resolution: "yocto-queue@npm:1.0.0"
   checksum: 10c0/856117aa15cf5103d2a2fb173f0ab4acb12b4b4d0ed3ab249fdbbf612e55d1cadfd27a6110940e24746fb0a78cf640b522cc8bca76f30a3b00b66e90cf82abe0
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^4.5.4":
+  version: 4.5.4
+  resolution: "zustand@npm:4.5.4"
+  dependencies:
+    use-sync-external-store: "npm:1.2.0"
+  peerDependencies:
+    "@types/react": ">=16.8"
+    immer: ">=9.0.6"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: 10c0/479af491ffa1f1eb2c38b3ba25dc4e14339e8b35a60033d3f6c165b22f8be8163f7e1370015ded9c6e28548cd25af84a73fb40b5fad0bd7882d16ddd5ed613c6
   languageName: node
   linkType: hard

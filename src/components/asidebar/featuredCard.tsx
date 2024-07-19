@@ -1,4 +1,3 @@
-import React from 'react';
 import { IconArrowNarrowRight } from '@tabler/icons-react';
 import Headphone from '../../public/headphone1.png';
 
