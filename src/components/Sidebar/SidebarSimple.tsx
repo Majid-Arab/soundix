@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ActionIcon, Card, Group, Title, Text } from '@mantine/core';
+import { ActionIcon, Card, Group, Title, Text, CloseButton } from '@mantine/core';
 import {
   IconBellRinging,
   IconFingerprint,
@@ -22,7 +22,11 @@ const data = [
   { link: '', label: 'Other Settings', icon: IconSettings },
 ];
 
-export function NavbarSimple() {
+type Props = {
+  close: () => void;
+};
+
+export function NavbarSimple({ close }: Props) {
   const [active, setActive] = useState('Billing');
 
   const links = data.map((item) => (
@@ -46,6 +50,7 @@ export function NavbarSimple() {
       <div className={classes.navbarMain}>
         <Group className={classes.header} justify="space-between">
           <Title>Soundix.</Title>
+          <CloseButton onClick={close} />
         </Group>
         {links}
         <Card withBorder padding="lg" radius="md" className={classes.card}>

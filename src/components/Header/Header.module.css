@@ -1,16 +1,16 @@
 .header {
   height: 56px;
-  margin-bottom: 120px;
+  /* margin-bottom: 120px; */
   background-color: var(--mantine-color-body);
   margin-left: var(--mantine-spacing-md);
   margin-right: var(--mantine-spacing-md);
 }
 
 .inner {
-  height: 56px;
-  display: flex;
+  /* height: 56px; */
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
 
 .link {

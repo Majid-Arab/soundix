@@ -14,20 +14,17 @@ import { IconBell, IconMessage, IconRulerMeasure, IconSearch } from '@tabler/ico
 import classes from './Header.module.css';
 
 export function HeaderSimple() {
-  const [opened, { toggle }] = useDisclosure(false);
-
   return (
-    <header className={classes.header}>
+    <div className={classes.header}>
       <div className={classes.inner}>
         <Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
           <Box>
             <Title>Headphones</Title>
             <Text>From top brands</Text>
           </Box>
         </Group>
 
-        <Group gap={20}>
+        {/* <Group gap={20}>
           <Autocomplete
             className={classes.search}
             placeholder="Search Product"
@@ -52,8 +49,8 @@ export function HeaderSimple() {
               src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png"
             />
           </Group>
-        </Group>
+        </Group> */}
       </div>
-    </header>
+    </div>
   );
 }

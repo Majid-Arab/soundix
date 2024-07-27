@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ActionIcon, AppShell, Box, Burger } from '@mantine/core';
+import { ActionIcon, AppShell, Box, Burger, Flex, Group } from '@mantine/core';
 import { useDisclosure, useMediaQuery } from '@mantine/hooks';
 import { IconChevronLeft, IconChevronRight } from '@tabler/icons-react';
 import { createStyles } from '@mantine/emotion';
@@ -30,7 +30,7 @@ const useStyles = createStyles((theme) => ({
 
 export function HomePage() {
   const { classes } = useStyles();
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle, close }] = useDisclosure();
   const [openedAside, { toggle: toggleAside, close: closeAside }] = useDisclosure(true);
   const isMobile = useMediaQuery('(max-width: 768px)');
 
@@ -51,17 +51,19 @@ export function HomePage() {
       }}
       withBorder={false}
     >
-      <AppShell.Header py="lg">
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-        <HeaderSimple />
+      <AppShell.Header p="sm">
+        <Flex align="center">
+          <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+          <HeaderSimple />
+        </Flex>
       </AppShell.Header>
 
       <AppShell.Navbar p="md">
-        <NavbarSimple />
+        <NavbarSimple close={close} />
       </AppShell.Navbar>
 
       <AppShell.Main>
-        <Box
+        {/* <Box
           style={{
             position: 'fixed',
             width: 500,
@@ -84,7 +86,7 @@ export function HomePage() {
             )}
             <Box>{openedAside && <Asidebar />}</Box>
           </Box>
-        </Box>
+        </Box> */}
         <Box style={{ height: '90%', width: '65%', backgroundColor: 'white' }} pt={20} px={20}>
           <Home />
         </Box>
