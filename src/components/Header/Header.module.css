@@ -4,13 +4,14 @@
   background-color: var(--mantine-color-body);
   margin-left: var(--mantine-spacing-md);
   margin-right: var(--mantine-spacing-md);
+  width: 100%;
 }
 
 .inner {
   /* height: 56px; */
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
 }
 
 .link {

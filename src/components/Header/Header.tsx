@@ -24,7 +24,7 @@ export function HeaderSimple() {
           </Box>
         </Group>
 
-        {/* <Group gap={20}>
+        <Group gap={20} visibleFrom="sm">
           <Autocomplete
             className={classes.search}
             placeholder="Search Product"
@@ -49,7 +49,7 @@ export function HeaderSimple() {
               src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-5.png"
             />
           </Group>
-        </Group> */}
+        </Group>
       </div>
     </div>
   );

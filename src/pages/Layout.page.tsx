@@ -7,6 +7,7 @@ import { HeaderSimple } from '@/components/Header/Header';
 import { NavbarSimple } from '@/components/Sidebar/SidebarSimple';
 import Asidebar from '@/components/Aside/Asidebar';
 import Home from './Home';
+import classes from './Layout.module.css';
 
 const HEADER_HEIGHT = 60;
 
@@ -63,6 +64,7 @@ export function HomePage() {
       </AppShell.Navbar>
 
       <AppShell.Main>
+        <Box className={classes.grid}></Box>
         {/* <Box
           style={{
             position: 'fixed',
@@ -87,7 +89,7 @@ export function HomePage() {
             <Box>{openedAside && <Asidebar />}</Box>
           </Box>
         </Box> */}
-        <Box style={{ height: '90%', width: '65%', backgroundColor: 'white' }} pt={20} px={20}>
+        <Box pt={20} px={20}>
           <Home />
         </Box>
       </AppShell.Main>

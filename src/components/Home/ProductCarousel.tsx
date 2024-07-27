@@ -1,37 +1,7 @@
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
-import { Paper, Text, Title, Button, useMantineTheme, rem } from '@mantine/core';
+import { Button, Paper, Title, useMantineTheme, Text } from '@mantine/core';
 import classes from './ProductCarousel.module.css';
-
-interface CardProps {
-  image: string;
-  title: string;
-  category: string;
-}
-
-function Card({ image, title, category }: CardProps) {
-  return (
-    <Paper
-      shadow="md"
-      p="sm"
-      radius="md"
-      style={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
-      <div>
-        <Text className={classes.category} size="xs">
-          {category}
-        </Text>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
-      </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
-    </Paper>
-  );
-}
 
 const data = [
   {
@@ -72,6 +42,36 @@ const data = [
   },
 ];
 
+interface CardProps {
+  image: string;
+  title: string;
+  category: string;
+}
+
+function Card({ image, title, category }: CardProps) {
+  return (
+    <Paper
+      shadow="md"
+      p="xl"
+      radius="md"
+      style={{ backgroundImage: `url(${image})` }}
+      className={classes.card}
+    >
+      <div>
+        <Text className={classes.category} size="xs">
+          {category}
+        </Text>
+        <Title order={3} className={classes.title}>
+          {title}
+        </Title>
+      </div>
+      <Button variant="white" color="dark">
+        Read article
+      </Button>
+    </Paper>
+  );
+}
+
 export function ProductCarousel() {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
@@ -84,7 +84,7 @@ export function ProductCarousel() {
   return (
     <Carousel
       slideSize={{ base: '100%', sm: '50%' }}
-      slideGap={{ base: rem(2), sm: 'xl' }}
+      slideGap={{ base: 'xl', sm: 2 }}
       align="start"
       slidesToScroll={mobile ? 1 : 2}
     >

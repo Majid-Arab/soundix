@@ -15,22 +15,6 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-around',
     backgroundColor: theme.colors.white,
     boxShadow: '0 -1px 3px rgba(0, 0, 0, 0.1)',
-    [`@media (min-width: ${theme.breakpoints.sm}px)`]: {
-      display: 'none',
-    },
-  },
-  icon: {
-    padding: theme.spacing.sm,
-    borderRadius: theme.radius.md,
-    backgroundColor: theme.colors.blue[0],
-    '&:hover': {
-      backgroundColor: theme.colors.blue[1],
-    },
-  },
-  iconInner: {
-    color: theme.black,
-    width: 60,
-    height: 60,
   },
 }));
 
@@ -38,16 +22,12 @@ const MobileFooter: React.FC = () => {
   const { classes } = useStyles();
 
   return (
-    <Box className={classes.footer}>
-      <ActionIcon className={classes.icon}>
-        <Box className={classes.iconInner}>
-          <IconMail size="100%" stroke={1.5} />
-        </Box>
+    <Box className={classes.footer} hiddenFrom="sm">
+      <ActionIcon>
+        <IconMail style={{ width: '70%', height: '70%' }} stroke={1.5} />
       </ActionIcon>
-      <ActionIcon className={classes.icon}>
-        <Box className={classes.iconInner}>
-          <IconBell size="100%" stroke={1.5} />
-        </Box>
+      <ActionIcon>
+        <IconBell style={{ width: '70%', height: '70%' }} stroke={1.5} />
       </ActionIcon>
       <Avatar
         src="https://avatars.githubusercontent.com/u/1?v=4"

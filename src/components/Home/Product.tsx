@@ -17,7 +17,7 @@ import classes from './Product.module.css';
 export function Product() {
   const [count, setCount] = useState(0);
   return (
-    <Container maw="100%" mah={400} pt={20}>
+    <Container pt={20}>
       <div className={classes.inner}>
         <Image src={image} className={classes.image} />
         <div className={classes.content}>

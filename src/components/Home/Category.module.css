@@ -5,9 +5,10 @@
 }
 
 .inner {
-  padding-left: var(--mantine-spacing-xl);
-  margin-left: var(--mantine-spacing-xl);
-  border-left: 2px solid black;
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    padding: rem(10);
+  }
 }
 
 .title {

@@ -9,7 +9,7 @@ const avatars = [
 
 export function Category() {
   return (
-    <Flex justify="center" align="center" gap={30} pt={60}>
+    <Flex className={classes.inner} justify="center" align="center" gap={30} pt={60}>
       <Card withBorder radius="md" p={20} className={classes.card} maw={500}>
         <Group wrap="nowrap" gap={0}>
           <Avatar.Group spacing="sm">

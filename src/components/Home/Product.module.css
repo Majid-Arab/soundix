@@ -1,6 +1,6 @@
 .inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-top: calc(var(--mantine-spacing-xl));
   padding-bottom: calc(var(--mantine-spacing-xl));
@@ -8,13 +8,18 @@
   box-shadow:
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    padding: rem(10);
+  }
 }
 
 .content {
   max-width: 480px;
   margin-right: calc(var(--mantine-spacing-xl) * 3);
 
-  @media (max-width: md) {
+  @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
     margin-right: 0;
   }
