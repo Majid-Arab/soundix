@@ -89,7 +89,7 @@ export function HomePage() {
             <Box>{openedAside && <Asidebar />}</Box>
           </Box>
         </Box> */}
-        <Box pt={20} px={20}>
+        <Box maw={1200} pt={20} px={20}>
           <Home />
         </Box>
       </AppShell.Main>

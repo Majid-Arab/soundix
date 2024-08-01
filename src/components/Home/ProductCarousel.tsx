@@ -1,6 +1,7 @@
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
-import { Button, Paper, Title, useMantineTheme, Text } from '@mantine/core';
+import { Button, Paper, Title, useMantineTheme, Text, Image, Group, rem } from '@mantine/core';
+import { IconStar } from '@tabler/icons-react';
 import classes from './ProductCarousel.module.css';
 
 const data = [
@@ -50,13 +51,10 @@ interface CardProps {
 
 function Card({ image, title, category }: CardProps) {
   return (
-    <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      style={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
+    <Paper shadow="md" p="xl" radius="md" className={classes.card}>
+      <div>
+        <Image src={image} height={220} />
+      </div>
       <div>
         <Text className={classes.category} size="xs">
           {category}
@@ -65,9 +63,18 @@ function Card({ image, title, category }: CardProps) {
           {title}
         </Title>
       </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
+      <Group justify="space-between" mt="lg">
+        <Button radius="xl" fz="lg">
+          <IconStar style={{ width: rem(16), height: rem(16) }} />
+        </Button>
+
+        <Group gap={5}>
+          <IconStar style={{ width: rem(16), height: rem(16) }} />
+          <Text fz="xs" fw={500}>
+            4.78
+          </Text>
+        </Group>
+      </Group>
     </Paper>
   );
 }
