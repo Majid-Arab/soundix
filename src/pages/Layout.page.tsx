@@ -7,7 +7,7 @@ import { HeaderSimple } from '@/components/Header/Header';
 import { NavbarSimple } from '@/components/Sidebar/SidebarSimple';
 import Asidebar from '@/components/Aside/Asidebar';
 import Home from './Home';
-import classes from './Layout.module.css';
+// import classes from './Layout.module.css';
 
 const HEADER_HEIGHT = 60;
 
@@ -89,7 +89,7 @@ export function HomePage() {
             <Box>{openedAside && <Asidebar />}</Box>
           </Box>
         </Box> */}
-        <Box maw={1200} pt={20} px={20}>
+        <Box maw={1200} p={20}>
           <Home />
         </Box>
       </AppShell.Main>

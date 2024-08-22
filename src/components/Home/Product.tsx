@@ -17,16 +17,18 @@ import classes from './Product.module.css';
 export function Product() {
   const [count, setCount] = useState(0);
   return (
-    <Container pt={20}>
+    <Container pt={20} m={0}>
       <div className={classes.inner}>
         <Image src={image} className={classes.image} />
         <div className={classes.content}>
-          <Title className={classes.title}>Beats Studio3 Wireless Headphone</Title>
+          <Title order={3} className={classes.title}>
+            Beats Studio3 Wireless Headphone
+          </Title>
           <Text c="dimmed" mt="md">
             Build fully functional accessible web applications faster than ever – Mantine includes
             more than 120 customizable components and hooks to cover you in any situation
           </Text>
-          <Title className={classes.price} style={{ color: 'lightgreen' }}>
+          <Title className={classes.price} style={{ color: '#00D4BC' }}>
             Price: $199.96
           </Title>
           <Group justify="space-between">
@@ -63,17 +65,31 @@ export function Product() {
 
           <Grid mt={30}>
             <Grid.Col span={2}>
-              <ActionIcon variant="outline" radius="md" size={50}>
+              <ActionIcon variant="outline" color="#009393" radius="md" size={50}>
                 <IconHeartFilled stroke={1} size={30} />
               </ActionIcon>
             </Grid.Col>
             <Grid.Col span={5}>
-              <Button fullWidth variant="outline" radius="md" size="lg" className={classes.control}>
+              <Button
+                fullWidth
+                variant="outline"
+                color="#009393"
+                radius="md"
+                size="lg"
+                className={classes.control}
+              >
                 Add to cart
               </Button>
             </Grid.Col>
             <Grid.Col span={5}>
-              <Button fullWidth variant="filled" radius="md" size="lg" className={classes.control}>
+              <Button
+                fullWidth
+                variant="filled"
+                color="#009393"
+                radius="md"
+                size="lg"
+                className={classes.control}
+              >
                 Buy now
               </Button>
             </Grid.Col>

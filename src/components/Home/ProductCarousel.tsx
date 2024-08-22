@@ -1,7 +1,17 @@
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
-import { Button, Paper, Title, useMantineTheme, Text, Image, Group, rem } from '@mantine/core';
-import { IconStar } from '@tabler/icons-react';
+import {
+  Button,
+  Paper,
+  Title,
+  useMantineTheme,
+  Text,
+  Image,
+  Group,
+  rem,
+  ActionIcon,
+} from '@mantine/core';
+import { IconPlus, IconStar } from '@tabler/icons-react';
 import classes from './ProductCarousel.module.css';
 
 const data = [
@@ -64,9 +74,9 @@ function Card({ image, title, category }: CardProps) {
         </Title>
       </div>
       <Group justify="space-between" mt="lg">
-        <Button radius="xl" fz="lg">
-          <IconStar style={{ width: rem(16), height: rem(16) }} />
-        </Button>
+        <ActionIcon variant="filled" color="#009393" aria-label="Settings" radius="xl">
+          <IconPlus style={{ width: '70%', height: '70%' }} stroke={1.5} />
+        </ActionIcon>
 
         <Group gap={5}>
           <IconStar style={{ width: rem(16), height: rem(16) }} />
@@ -90,10 +100,10 @@ export function ProductCarousel() {
 
   return (
     <Carousel
-      slideSize={{ base: '100%', sm: '50%' }}
+      slideSize={{ base: '100%', sm: '30%' }}
       slideGap={{ base: 'xl', sm: 2 }}
       align="start"
-      slidesToScroll={mobile ? 1 : 2}
+      slidesToScroll={mobile ? 1 : 1}
     >
       {slides}
     </Carousel>
